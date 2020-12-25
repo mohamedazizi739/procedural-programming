@@ -1,0 +1,55 @@
+1)
+PROCEDURE add_num(VAR s1:set1,VAR s2:set2)
+VAR
+i: INTEGER;
+somme:INTEGER:=0
+BEGIN
+for i from 0 to 4 do
+  somme=somme+s1[i]*s2[i] 
+end for
+if(somme==0) then
+   write(orthogonal)
+else
+   write(not orthogonal)
+end if
+END
+
+ALGORITHM procedural programming1
+
+VAR
+tab : set1[3];
+tab : set2[3];
+
+BEGIN
+set1 := {1,2,3}; 
+set2 := {1,-2,3};
+add_num(set1,set2);
+END
+
+2)
+FUNCTION add_num(VAR s1:set1,VAR s2:set2)
+VAR
+i: INTEGER;
+somme:INTEGER:=0
+BEGIN
+for i from 0 to 4 do
+  somme=somme+s1[i]*s2[i] 
+end for
+if(somme==0) then
+   return("orthogonal")
+else
+   return("not orthogonal")
+end if
+END
+
+ALGORITHM procedural programming1
+
+VAR
+tab : set1[3];
+tab : set2[3];
+
+BEGIN
+set1 := {1,2,3}; 
+set2 := {1,-2,3};
+write(add_num(set1,set2));
+END
